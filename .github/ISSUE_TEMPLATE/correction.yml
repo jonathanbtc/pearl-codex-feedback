@@ -1,0 +1,29 @@
+name: Correction
+description: Something on pearlcodex.com is wrong or out of date.
+labels: [correction]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page's address.
+      placeholder: https://pearlcodex.com/technical/block/header/
+    validations:
+      required: true
+  - type: input
+    id: verified
+    attributes:
+      label: Verified against
+      description: The Pearl version the page says it was checked against (in its header).
+      placeholder: pearl v1.5.2
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What looks wrong
+    validations:
+      required: true
+  - type: textarea
+    id: should
+    attributes:
+      label: What it should say
+      description: With a source if you have one, such as Pearl's code at a release tag, a block or transaction, or a spec.
